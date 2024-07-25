@@ -1,0 +1,3 @@
+2024-07-25/15:59:25		KeyError:Key value error incorrect key passed
+2024-07-25/16:15:00		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
+

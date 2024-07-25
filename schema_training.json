@@ -1,0 +1,13 @@
+{
+    "NumberofColumns": 2,
+    "Columns": {
+        "First_Column": [
+            "object",
+            "datetime64[ns]"
+        ],
+        "Second_Column": [
+            "float64",
+            "int64"
+        ]
+    }
+}
