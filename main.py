@@ -8,9 +8,9 @@ from trainingModel import trainModel
 import json
 
 path='D:\ACADEMIC\ML Projects\Power Consumption Forecasting\Training_Raw_file'
-train_valObj = train_validation(path)
-train_valObj.train_validation()
-trainModelObj = trainModel()
+#train_valObj = train_validation(path)
+#train_valObj.train_validation()
+trainModelObj = trainModel(path)
 trainModelObj.trainingModel()
 # os.putenv('LANG', 'en_US.UTF-8')
 # os.putenv('LC_ALL', 'en_US.UTF-8')

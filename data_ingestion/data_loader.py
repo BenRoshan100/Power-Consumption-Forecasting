@@ -12,7 +12,7 @@ class Data_Getter:
 
         self.logger_object.log(self.file_object, 'Entered the get_data method of Data_Getter class')
         try: 
-            data=pd.Dataframe()
+            data=pd.DataFrame()
 
             for file in os.listdir(self.training_file_path):
                 if file.endswith('.csv'):
