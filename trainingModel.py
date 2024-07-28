@@ -38,7 +38,7 @@ class trainModel:
             data=preprocessor.extract_date_features(data)
 
             categorical_columns=['weekday_name','season','week_type']
-            data,encoder=preprocessor.ordinal_encode_columns(data,categorical_columns)
+            data=preprocessor.ordinal_encode_columns(data,categorical_columns)
 
             label_column=data.columns[1]
             X,y=preprocessor.split_features_labels(data,label_column)
@@ -48,13 +48,13 @@ class trainModel:
             
             """Model Training starts here"""
 
-            model_finder=tuner.Model_Finder(self.file_object,self.log_writer)
+            model_trainer=tuner.Model_Trainer(self.file_object,self.log_writer)
             df_prophet=data[[first_column,second_column]]
-            best_model_name,best_model=model_finder.get_best_model(X_train,y_train,X_test,y_test,df_prophet)
+            xgboost_model,model_name1,prophet_model,model_name2=model_trainer.get_trained_model(X_train,y_train,X_test,y_test,df_prophet)
             
             file_op=file_methods.File_Operation(self.file_object,self.log_writer)
 
-            save_model=file_op.save_model(best_model,best_model_name,encoder)
+            save_model=file_op.save_model(xgboost_model,model_name1,prophet_model,model_name2)
             
             self.log_writer.log(self.file_object,'Successful End of Training')
             self.file_object.close()

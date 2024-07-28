@@ -1,0 +1,2 @@
+2024-07-28/10:42:41		Start of Validation files!
+2024-07-28/10:42:41		Validation completed and files copied to validation_complete folder.

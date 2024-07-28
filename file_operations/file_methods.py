@@ -8,23 +8,33 @@ class File_Operation:
         self.logger_object = logger_object 
         self.model_directory = 'models/'
 
-    def save_model(self,model,filename,label_encoder):
+    def save_model(self,model1,filename1,model2,filename2):
         self.logger_object.log(self.file_object,'Entered the save_model method of the File_Operation class')
         try:
-            path=os.path.join(self.model_directory,filename)
+            path=os.path.join(self.model_directory,filename1)
             if os.path.isdir(path):
                 shutil.rmtree(self.model_directory)
                 os.makedirs(path)
             else:
                 os.makedirs(path)
-            with open(path+'/'+filename+'.sav','wb') as f:
-                pickle.dump((model,label_encoder),f)
-            self.logger_object.log(self.file_object,'Model File'+filename+' saved. Exited the save_model method of the Model_Finder class')
+            with open(path+'/'+filename1+'.sav','wb') as f:
+                pickle.dump((model1),f)
+            self.logger_object.log(self.file_object,'Model File'+filename1+' saved. Exited the save_model method of the Model_Finder class')
+
+
+            path=os.path.join(self.model_directory,filename2)
+            if os.path.isdir(path):
+                shutil.rmtree(self.model_directory)
+                os.makedirs(path)
+            else:
+                os.makedirs(path)
+            with open(path+'/'+filename2+'.sav','wb') as f:
+                pickle.dump((model2),f)
+            self.logger_object.log(self.file_object,'Model File'+filename2+' saved. Exited the save_model method of the Model_Finder class')
 
             return 'success'
         except Exception as e:
             self.logger_object.log(self.file_object,'Exception occured in save_model method of the Model_Finder class. Exception message: '+str(e))
-            self.logger_object.log(self.file_object,'Model File'+filename+' coult not be saved. Exited the save_model method of the Model_Finder class')
             raise Exception()
     
     def find_correct_model_file(self):

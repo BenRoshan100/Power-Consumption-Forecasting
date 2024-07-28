@@ -1,0 +1,121 @@
+2024-07-28/12:47:25		Start of Prediction
+2024-07-28/12:47:25		Error occurred while running prediction. Error:: Data_Getter.__init__() missing 1 required positional argument: 'path'
+2024-07-28/12:49:24		Start of Prediction
+2024-07-28/12:49:24		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/12:49:24		Exception occued in get_data method of Data_Getter class. Exception message:[Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-28/12:49:24		Data Load Unsuccessful. Exited get_data method of Data_Getter class.
+2024-07-28/12:49:24		Error occurred while running prediction. Error:: 
+2024-07-28/12:50:19		Start of Prediction
+2024-07-28/12:50:19		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/12:50:19		Exception occued in get_data method of Data_Getter class. Exception message:[Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-28/12:50:19		Data Load Unsuccessful. Exited get_data method of Data_Getter class.
+2024-07-28/12:50:19		Error occurred while running prediction. Error:: 
+2024-07-28/12:50:44		Start of Prediction
+2024-07-28/12:50:44		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/12:50:44		Exception occued in get_data method of Data_Getter class. Exception message:[Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-28/12:50:44		Data Load Unsuccessful. Exited get_data method of Data_Getter class.
+2024-07-28/12:50:44		Error occurred while running prediction. Error:: 
+2024-07-28/12:52:29		Start of Prediction
+2024-07-28/12:52:29		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/12:52:29		Exception occued in get_data method of Data_Getter class. Exception message:[Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-28/12:52:29		Data Load Unsuccessful. Exited get_data method of Data_Getter class.
+2024-07-28/12:52:29		Error occurred while running prediction. Error:: 
+2024-07-28/12:54:45		Start of Prediction
+2024-07-28/12:54:45		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/12:54:45		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/12:54:45		Started converting datatypes of columns
+2024-07-28/12:54:45		Successfully converted columns to appropriate format
+2024-07-28/12:54:45		Started extracting date features
+2024-07-28/12:54:45		Successfully extracted data features
+2024-07-28/12:54:45		Start ordinal encoding
+2024-07-28/12:54:45		Successfully ordinal encoded the columns
+2024-07-28/12:54:45		Entered the load_model method of the File_Operation class
+2024-07-28/12:54:45		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/12:54:45		Entered the load_model method of the File_Operation class
+2024-07-28/12:54:45		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/12:54:45		Error occurred while running prediction. Error:: 'tuple' object has no attribute 'predict'
+2024-07-28/14:20:42		Start of Prediction
+2024-07-28/14:20:42		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/14:20:42		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/14:20:42		Started converting datatypes of columns
+2024-07-28/14:20:42		Successfully converted columns to appropriate format
+2024-07-28/14:20:42		Started extracting date features
+2024-07-28/14:20:42		Successfully extracted data features
+2024-07-28/14:20:42		Start ordinal encoding
+2024-07-28/14:20:42		Successfully ordinal encoded the columns
+2024-07-28/14:20:42		Entered the load_model method of the File_Operation class
+2024-07-28/14:20:42		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:20:42		Entered the load_model method of the File_Operation class
+2024-07-28/14:20:42		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:20:42		Error occurred while running prediction. Error:: DataFrame.dtypes for data must be int, float or bool.
+                Did not expect the data types in fields Datetime, date, week_of_year
+2024-07-28/14:23:24		Start of Prediction
+2024-07-28/14:23:24		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/14:23:24		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/14:23:24		Started converting datatypes of columns
+2024-07-28/14:23:24		Successfully converted columns to appropriate format
+2024-07-28/14:23:24		Started extracting date features
+2024-07-28/14:23:24		Successfully extracted data features
+2024-07-28/14:23:24		Start ordinal encoding
+2024-07-28/14:23:24		Successfully ordinal encoded the columns
+2024-07-28/14:23:24		Entered the load_model method of the File_Operation class
+2024-07-28/14:23:24		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:23:24		Entered the load_model method of the File_Operation class
+2024-07-28/14:23:24		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:23:24		Error occurred while running prediction. Error:: Cannot save file into a non-existent directory: 'Prediction_Output_File'
+2024-07-28/14:23:41		Start of Prediction
+2024-07-28/14:23:41		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/14:23:41		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/14:23:41		Started converting datatypes of columns
+2024-07-28/14:23:41		Successfully converted columns to appropriate format
+2024-07-28/14:23:41		Started extracting date features
+2024-07-28/14:23:41		Successfully extracted data features
+2024-07-28/14:23:41		Start ordinal encoding
+2024-07-28/14:23:41		Successfully ordinal encoded the columns
+2024-07-28/14:23:41		Entered the load_model method of the File_Operation class
+2024-07-28/14:23:41		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:23:41		Entered the load_model method of the File_Operation class
+2024-07-28/14:23:41		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:23:42		End of Prediction
+2024-07-28/14:24:40		Start of Prediction
+2024-07-28/14:24:40		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/14:24:40		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/14:24:40		Started converting datatypes of columns
+2024-07-28/14:24:40		Successfully converted columns to appropriate format
+2024-07-28/14:24:40		Started extracting date features
+2024-07-28/14:24:40		Successfully extracted data features
+2024-07-28/14:24:40		Start ordinal encoding
+2024-07-28/14:24:40		Successfully ordinal encoded the columns
+2024-07-28/14:24:40		Entered the load_model method of the File_Operation class
+2024-07-28/14:24:40		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:24:40		Entered the load_model method of the File_Operation class
+2024-07-28/14:24:40		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/14:24:40		End of Prediction
+2024-07-28/17:14:47		Start of Prediction
+2024-07-28/17:14:47		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/17:14:47		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/17:14:47		Started converting datatypes of columns
+2024-07-28/17:14:47		Successfully converted columns to appropriate format
+2024-07-28/17:14:47		Started extracting date features
+2024-07-28/17:14:47		Successfully extracted data features
+2024-07-28/17:14:47		Start ordinal encoding
+2024-07-28/17:14:47		Successfully ordinal encoded the columns
+2024-07-28/17:14:47		Entered the load_model method of the File_Operation class
+2024-07-28/17:14:47		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/17:14:47		Entered the load_model method of the File_Operation class
+2024-07-28/17:14:47		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/17:15:01		End of Prediction
+2024-07-28/17:16:13		Start of Prediction
+2024-07-28/17:16:13		Entered the get_data method of Data_Getter class for Prediction
+2024-07-28/17:16:13		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-28/17:16:13		Started converting datatypes of columns
+2024-07-28/17:16:13		Successfully converted columns to appropriate format
+2024-07-28/17:16:13		Started extracting date features
+2024-07-28/17:16:13		Successfully extracted data features
+2024-07-28/17:16:13		Start ordinal encoding
+2024-07-28/17:16:13		Successfully ordinal encoded the columns
+2024-07-28/17:16:13		Entered the load_model method of the File_Operation class
+2024-07-28/17:16:13		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-28/17:16:13		Entered the load_model method of the File_Operation class
+2024-07-28/17:16:13		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-28/17:16:28		End of Prediction

@@ -10,11 +10,12 @@ class Preprocessor:
         self.file_object = file_object
         self.logger_object =logger_object
     
-    def convert_columns(self,data,date_column,float_column):
+    def convert_columns(self,data,date_column,float_column=None):
         self.logger_object.log(self.file_object,'Started converting datatypes of columns')
         try:
             data[date_column]=pd.to_datetime(data[date_column],format='%Y-%m-%d %H:%M:%S',errors='coerce')
-            data[float_column]=data[float_column].astype(float)
+            if float_column is not None:
+                data[float_column] = data[float_column].astype(float)
             self.logger_object.log(self.file_object,'Successfully converted columns to appropriate format')
             return data
         except Exception as e:
@@ -67,7 +68,7 @@ class Preprocessor:
             encoder=OrdinalEncoder()
             data[columns]=encoder.fit_transform(data[columns])
             self.logger_object.log(self.file_object,'Successfully ordinal encoded the columns')
-            return data,encoder 
+            return data 
         except Exception as e:
             self.logger_object.log(self.file_object,'Error in ordinal encoding'+str(e))
             raise e 

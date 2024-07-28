@@ -1,0 +1,9 @@
+{
+    "NumberofColumns": 1,
+    "Columns": {
+        "First_Column": [
+            "object",
+            "datetime64[ns]"
+        ]
+    }
+}

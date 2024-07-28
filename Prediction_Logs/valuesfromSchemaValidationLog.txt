@@ -1,0 +1,1 @@
+2024-07-28/10:42:41		Total Columns: 1	Expected First column types: ['object', 'datetime64[ns]']
