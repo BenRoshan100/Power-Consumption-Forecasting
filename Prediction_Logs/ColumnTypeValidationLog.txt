@@ -1,2 +1,20 @@
 2024-07-28/10:42:41		Column Type Validation started successfully
 2024-07-28/10:42:41		Column validation completed
+2024-07-29/22:14:17		Column Type Validation started successfully
+2024-07-29/22:14:17		Column Type Validation Completed!
+2024-07-29/22:15:27		Column Type Validation started successfully
+2024-07-29/22:15:27		Column Type Validation Completed!
+2024-07-29/22:19:28		Column Type Validation started successfully
+2024-07-29/22:19:28		Column Type Validation Completed!
+2024-07-29/22:24:39		Column Type Validation started successfully
+2024-07-29/22:24:39		Column Type Validation Completed!
+2024-07-29/22:28:09		Column Type Validation started successfully
+2024-07-29/22:28:09		Column Type Validation Completed!
+2024-07-29/22:30:34		Column Type Validation started successfully
+2024-07-29/22:30:34		Column Type Validation Completed!
+2024-07-29/22:36:57		Column Type Validation started successfully
+2024-07-29/22:36:57		Column Type Validation Completed!
+2024-07-29/22:40:47		Column Type Validation started successfully
+2024-07-29/22:40:47		Column Type Validation Completed!
+2024-07-29/22:45:50		Column Type Validation started successfully
+2024-07-29/22:45:50		Column Type Validation Completed!

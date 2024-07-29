@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+</head>
+
+<body>
+    <h1>Power Consumption Predictions</h1>
+
+    <!-- Input field for file path and predict button -->
+    <div>
+        <label for="filepath">File Path:</label>
+        <input type="text" id="filepath" placeholder="Enter file path">
+        <button id="predict-btn">Predict</button>
+    </div>
+
+    <h2>XGBoost Predictions (Sample)</h2>
+    <table id="xgboost-sample">
+        <!-- Sample data will be populated here -->
+    </table>
+    <img id="xgboost-img" src="" alt="XGBoost Predictions">
+
+    <h2>Prophet Predictions (Sample)</h2>
+    <table id="prophet-sample">
+        <!-- Sample data will be populated here -->
+    </table>
+    <img id="prophet-img" src="" alt="Prophet Predictions">
+
+    <script>
+        document.getElementById("predict-btn").addEventListener("click", function () {
+            const filepath = document.getElementById("filepath").value;
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ filepath: filepath })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Update XGBoost sample table
+                    const xgboostSample = data.xgboost.slice(0, 5);
+                    const xgboostTable = document.getElementById('xgboost-sample');
+                    xgboostTable.innerHTML = ""; // Clear previous data
+                    xgboostSample.forEach(row => {
+                        const tr = document.createElement('tr');
+                        const dateTd = document.createElement('td');
+                        dateTd.textContent = row.Date;
+                        const forecastTd = document.createElement('td');
+                        forecastTd.textContent = row.Forecasts;
+                        tr.appendChild(dateTd);
+                        tr.appendChild(forecastTd);
+                        xgboostTable.appendChild(tr);
+                    });
+
+                    // Update Prophet sample table
+                    const prophetSample = data.prophet.slice(0, 5);
+                    const prophetTable = document.getElementById('prophet-sample');
+                    prophetTable.innerHTML = ""; // Clear previous data
+                    prophetSample.forEach(row => {
+                        const tr = document.createElement('tr');
+                        const dateTd = document.createElement('td');
+                        dateTd.textContent = row.Date;
+                        const forecastTd = document.createElement('td');
+                        forecastTd.textContent = row.Forecasts;
+                        tr.appendChild(dateTd);
+                        tr.appendChild(forecastTd);
+                        prophetTable.appendChild(tr);
+                    });
+
+                    // Update images
+                    document.getElementById('xgboost-img').src = "/static/xgboost_predictions.png";
+                    document.getElementById('prophet-img').src = "/static/prophet_predictions.png";
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

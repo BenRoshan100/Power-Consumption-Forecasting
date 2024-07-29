@@ -46,28 +46,33 @@ class Prediction_Data_validation:
 
         
     def validateColumnLength(self, NoOfColumns):
+        log_file_path = "Prediction_Logs/columnValidationLog.txt"
         try:
-            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
-            self.logger.log(f, "Column Length Validation started successfully")
-            for file in listdir(self.Batch_Directory):
-                csv = pd.read_csv(os.path.join(self.Batch_Directory, file))
-                if csv.shape[1] != NoOfColumns:
-                    self.logger.log(f, f"Invalid Column Length for the file: {file}")
-                    f.close()
-                    return False
-            self.logger.log(f, "Column Length Validation Completed!")
-            f.close()
-            return True
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, "Column Length Validation started successfully")
+                for file in listdir(self.Batch_Directory):
+                    if file.endswith('.csv'):  
+                        try:
+                            csv = pd.read_csv(os.path.join(self.Batch_Directory, file))
+                            if csv.shape[1] != NoOfColumns:
+                                self.logger.log(f, f"Invalid Column Length for the file: {file}")
+                                return False
+                        except OSError as e:
+                            self.logger.log(f, f"Error reading the file: {file}, Error: {e}")
+                            raise OSError(e)
+                        except Exception as e:
+                            self.logger.log(f, f"Error processing the file: {file}, Error: {e}")
+                            raise e
+                self.logger.log(f, "Column Length Validation Completed!")
+                return True
         except OSError as e:
-            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
-            self.logger.log(f, f"Error Occured while moving the file: {e}")
-            f.close()
-            raise OSError
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, f"Error Occured while accessing the directory: {e}")
+            raise OSError(e)
         except Exception as e:
-            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
-            self.logger.log(f, f"Error Occured: {e}")
-            f.close()
-            raise e 
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, f"Error Occured: {e}")
+            raise e
         
     def validate_column_type(self,column,expected_types):
         actual_type=str(column.dtype)
@@ -82,43 +87,49 @@ class Prediction_Data_validation:
 
         return actual_type in expected_types
     
-    def validateColumnTypes(self,first_column_types):
+    def validateColumnTypes(self, first_column_types):
+        log_file_path = "Prediction_Logs/ColumnTypeValidationLog.txt"
         try:
-            f=open("Prediction_Logs/ColumnTypeValidationLog.txt",'a+')
-            self.logger.log(f,"Column Type Validation started successfully")
-            for file in listdir(self.Batch_Directory):
-                csv=pd.read_csv(os.path.join(self.Batch_Directory,file))
-                if not self.validate_column_type(csv.iloc[:,0],first_column_types):
-                    self.logger.log(f,f"Invalid type for first column in file {file}. Expected one of {first_column_types}, got {str(csv.iloc[:,0].dtype)}")
-                self.logger.log(f,"Column validation completed")
-                f.close()
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, "Column Type Validation started successfully")
+                for file in listdir(self.Batch_Directory):
+                    if file.endswith('.csv'): 
+                        try:
+                            csv = pd.read_csv(os.path.join(self.Batch_Directory, file))
+                            if not self.validate_column_type(csv.iloc[:, 0], first_column_types):
+                                self.logger.log(f, f"Invalid type for first column in file {file}. Expected one of {first_column_types}, got {str(csv.iloc[:, 0].dtype)}")
+                        except Exception as e:
+                            self.logger.log(f, f"Error processing the file: {file}, Error: {e}")
+                            raise e
+                self.logger.log(f, "Column Type Validation Completed!")
         except Exception as e:
-            f=open("Prediction_Logs/columnTypeValidationLog.txt", 'a+')
-            self.logger.log(f,"Error Occured: {e}")
-            f.close()
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, f"Error Occured: {e}")
             raise e
 
     def validateMissingValuesInWholeColumn(self):
+        log_file_path = "Prediction_Logs/missingValuesInColumn.txt"
         try:
-            f = open("Prediction_Logs/missingValuesInColumn.txt", 'a+')
-            self.logger.log(f, "Missing Values Validation Started!!")
-            for file in listdir(self.Batch_Directory):
-                csv = pd.read_csv(os.path.join(self.Batch_Directory, file))
-                for column in csv.columns:
-                    if csv[column].isnull().all():
-                        self.logger.log(f, f"All values missing in column: {column} for file: {file}.")
-                        f.close()
-                        return False
-            self.logger.log(f, "Missing Values Validation Completed!")
-            f.close()
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, "Missing Values Validation Started!!")
+                for file in listdir(self.Batch_Directory):
+                    if file.endswith('.csv'): 
+                        try:
+                            csv = pd.read_csv(os.path.join(self.Batch_Directory, file))
+                            for column in csv.columns:
+                                if csv[column].isnull().all():
+                                    self.logger.log(f, f"All values missing in column: {column} for file: {file}.")
+                                    return False
+                        except Exception as e:
+                            self.logger.log(f, f"Error processing the file: {file}, Error: {e}")
+                            raise e
+                self.logger.log(f, "Missing Values Validation Completed!")
             return True
         except OSError as e:
-            f = open("Prediction_Logs/missingValuesInColumn.txt", 'a+')
-            self.logger.log(f, f"Error occured while moving file: {e}")
-            f.close()
-            raise OSError 
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, f"Error occured while accessing the directory: {e}")
+            raise OSError(e)
         except Exception as e:
-            f = open("Prediction_Logs/missingValuesInColumn.txt", 'a+')
-            self.logger.log(f, f"Error Occured: {e}")
-            f.close()
-            raise e 
+            with open(log_file_path, 'a+') as f:
+                self.logger.log(f, f"Error Occured: {e}")
+            raise e

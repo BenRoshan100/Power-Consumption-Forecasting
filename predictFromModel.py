@@ -4,7 +4,9 @@ from data_preprocessing import preprocessing
 from application_logging import logger 
 from data_ingestion import data_loader
 import os
+import pandas as pd
 from Prediction_Raw_data_validation.predictionDataValidation import Prediction_Data_validation
+import matplotlib.pyplot as plt
 
 class prediction:
     def __init__(self,path):
@@ -43,12 +45,38 @@ class prediction:
             prophet_result = forecast['yhat'][:len(prophet_data)]
             xgb_final_result=pandas.DataFrame(list(zip(dates,xgb_result)),columns=['Date', 'Forecasts'])
             prophet_final_result=pandas.DataFrame(list(zip(dates,prophet_result)),columns=['Date', 'Forecasts'])
+            xgb_final_result['Date'] = pd.to_datetime(xgb_final_result['Date'])
+            xgb_final_result = xgb_final_result.sort_values(by='Date')
+
+            prophet_final_result['Date'] = pd.to_datetime(prophet_final_result['Date'])
+            prophet_final_result = prophet_final_result.sort_values(by='Date')
             xgb_final_result.to_csv("Prediction_Output_File/Predictions_XGBoost.csv",header=True,mode='w')
             prophet_final_result.to_csv("Prediction_Output_File/Predictions_Prophet.csv",header=True,mode='w')
+            
+
+            plt.figure(figsize=(10, 6))
+            plt.plot(dates, xgb_result, label='XGBoost Predictions')
+            plt.xlabel('Date')
+            plt.ylabel('Forecasts')
+            plt.title('XGBoost Predictions')
+            plt.legend()
+            plt.savefig('static/xgboost_predictions.png')
+            plt.close()
+
+
+            plt.figure(figsize=(10, 6))
+            plt.plot(dates, prophet_result, label='Prophet Predictions')
+            plt.xlabel('Date')
+            plt.ylabel('Forecasts')
+            plt.title('Prophet Predictions')
+            plt.legend()
+            plt.savefig('static/prophet_predictions.png')
+            plt.close()
+
             self.log_writer.log(self.file_object,'End of Prediction')
         except Exception as e:
             self.log_writer.log(self.file_object,'Error occurred while running prediction. Error:: %s' %e)
             raise e 
-        return xgb_final_result.head(),prophet_final_result.head()
+        return xgb_final_result,prophet_final_result
 
 

@@ -1,2 +1,48 @@
 2024-07-28/10:42:41		Column Length Validation started successfully
 2024-07-28/10:42:41		Column Length Validation Completed!
+2024-07-29/21:37:08		Column Length Validation started successfully
+2024-07-29/21:37:08		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:48:22		Column Length Validation started successfully
+2024-07-29/21:48:22		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:55:56		Column Length Validation started successfully
+2024-07-29/21:55:57		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:56:14		Column Length Validation started successfully
+2024-07-29/21:56:14		Error Occured while moving the file: [WinError 123] The filename, directory name, or volume label syntax is incorrect: "'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file'"
+2024-07-29/21:56:27		Column Length Validation started successfully
+2024-07-29/21:56:27		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:57:45		Column Length Validation started successfully
+2024-07-29/21:57:45		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:58:22		Column Length Validation started successfully
+2024-07-29/21:58:22		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:59:05		Column Length Validation started successfully
+2024-07-29/21:59:05		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/21:59:56		Column Length Validation started successfully
+2024-07-29/21:59:56		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/22:01:21		Column Length Validation started successfully
+2024-07-29/22:01:21		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/22:02:21		Column Length Validation started successfully
+2024-07-29/22:02:21		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Prediction_Raw_file\\validation_complete'
+2024-07-29/22:08:13		Column Length Validation started successfully
+2024-07-29/22:08:13		Column Length Validation Completed!
+2024-07-29/22:14:17		Column Length Validation started successfully
+2024-07-29/22:14:17		Column Length Validation Completed!
+2024-07-29/22:15:27		Column Length Validation started successfully
+2024-07-29/22:15:27		Column Length Validation Completed!
+2024-07-29/22:19:28		Column Length Validation started successfully
+2024-07-29/22:19:28		Column Length Validation Completed!
+2024-07-29/22:24:39		Column Length Validation started successfully
+2024-07-29/22:24:39		Column Length Validation Completed!
+2024-07-29/22:28:09		Column Length Validation started successfully
+2024-07-29/22:28:09		Column Length Validation Completed!
+2024-07-29/22:30:34		Column Length Validation started successfully
+2024-07-29/22:30:34		Column Length Validation Completed!
+2024-07-29/22:36:57		Column Length Validation started successfully
+2024-07-29/22:36:57		Column Length Validation Completed!
+2024-07-29/22:38:36		Column Length Validation started successfully
+2024-07-29/22:38:36		Invalid Column Length for the file: booking_20240607_085628.csv
+2024-07-29/22:40:47		Column Length Validation started successfully
+2024-07-29/22:40:47		Column Length Validation Completed!
+2024-07-29/22:43:27		Column Length Validation started successfully
+2024-07-29/22:43:27		Error Occured while accessing the directory: [WinError 3] The system cannot find the path specified: 'path/to/prediction/file.csv'
+2024-07-29/22:45:50		Column Length Validation started successfully
+2024-07-29/22:45:50		Column Length Validation Completed!
