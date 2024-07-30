@@ -4,3 +4,11 @@
 2024-07-26/16:04:34		Column Length Validation Completed!
 2024-07-26/16:04:53		Column Length Validation started successfully
 2024-07-26/16:04:53		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Training_Raw_file\\validation_complete'
+2024-07-30/22:48:42		Column Length Validation started successfully
+2024-07-30/22:48:42		Error Occured while moving the file: [Errno 13] Permission denied: 'D:\\ACADEMIC\\ML Projects\\Power Consumption Forecasting\\Training_Raw_file\\validation_complete'
+2024-07-30/22:52:58		Column Length Validation started successfully
+2024-07-30/22:52:58		Column Length Validation Completed!
+2024-07-30/22:54:06		Column Length Validation started successfully
+2024-07-30/22:54:06		Column Length Validation Completed!
+2024-07-30/22:55:35		Column Length Validation started successfully
+2024-07-30/22:55:35		Column Length Validation Completed!

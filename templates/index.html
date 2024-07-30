@@ -3,82 +3,212 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://energyintel.brightspotcdn.com/dims4/default/56e6b2e/2147483647/strip/true/crop/4500x2164+0+0/resize/1920x923!/quality/90/?url=http%3A%2F%2Fenergy-intelligence-brightspot.s3.us-east-2.amazonaws.com%2Fe9%2F18%2Fe388de424c9aa35801ba6b3638eb%2Fshutterstock-1181137768.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1,
+        h2 {
+            color: #f8b400;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f8b400;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+
+        .predictions-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .sample-predictions,
+        .predictions {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f8b400;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Power Consumption Predictions</h1>
+    <h1>Forecast Predictions</h1>
 
-    <!-- Input field for file path and predict button -->
-    <div>
+    <form id="trainForm">
+        <h2>Train Model</h2>
+        <label for="folderPath">Folder Path:</label>
+        <input type="text" id="folderPath" name="folderPath" required>
+        <button type="submit">Train</button>
+        <p id="trainMessage" style="display:none; color: #f8b400; margin-top: 10px;">Training complete! Please enter the
+            file path for predictions and click Predict.</p>
+    </form>
+
+    <form id="predictForm" style="display:none;">
+        <h2>Get Predictions</h2>
         <label for="filepath">File Path:</label>
-        <input type="text" id="filepath" placeholder="Enter file path">
-        <button id="predict-btn">Predict</button>
+        <input type="text" id="filepath" name="filepath" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    <div class="predictions-container">
+        <div class="sample-predictions">
+            <h2>XGBoost Predictions (Sample)</h2>
+            <table id="xgboostSampleTable"></table>
+
+            <h2>Prophet Predictions (Sample)</h2>
+            <table id="prophetSampleTable"></table>
+        </div>
+
+        <div class="predictions">
+            <h2>XGBoost Predictions</h2>
+            <img src="{{ url_for('static', filename='xgboost_predictions.png') }}" alt="XGBoost Predictions"
+                id="xgboostImg">
+
+            <h2>Prophet Predictions</h2>
+            <img src="{{ url_for('static', filename='prophet_predictions.png') }}" alt="Prophet Predictions"
+                id="prophetImg">
+        </div>
     </div>
 
-    <h2>XGBoost Predictions (Sample)</h2>
-    <table id="xgboost-sample">
-        <!-- Sample data will be populated here -->
-    </table>
-    <img id="xgboost-img" src="" alt="XGBoost Predictions">
-
-    <h2>Prophet Predictions (Sample)</h2>
-    <table id="prophet-sample">
-        <!-- Sample data will be populated here -->
-    </table>
-    <img id="prophet-img" src="" alt="Prophet Predictions">
-
     <script>
-        document.getElementById("predict-btn").addEventListener("click", function () {
-            const filepath = document.getElementById("filepath").value;
-            fetch('/predict', {
+        document.getElementById('trainForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const folderPath = document.getElementById('folderPath').value;
+            fetch('/train', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ filepath: filepath })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ folderPath: folderPath })
             })
-                .then(response => response.json())
-                .then(data => {
-                    // Update XGBoost sample table
-                    const xgboostSample = data.xgboost.slice(0, 5);
-                    const xgboostTable = document.getElementById('xgboost-sample');
-                    xgboostTable.innerHTML = ""; // Clear previous data
-                    xgboostSample.forEach(row => {
-                        const tr = document.createElement('tr');
-                        const dateTd = document.createElement('td');
-                        dateTd.textContent = row.Date;
-                        const forecastTd = document.createElement('td');
-                        forecastTd.textContent = row.Forecasts;
-                        tr.appendChild(dateTd);
-                        tr.appendChild(forecastTd);
-                        xgboostTable.appendChild(tr);
-                    });
-
-                    // Update Prophet sample table
-                    const prophetSample = data.prophet.slice(0, 5);
-                    const prophetTable = document.getElementById('prophet-sample');
-                    prophetTable.innerHTML = ""; // Clear previous data
-                    prophetSample.forEach(row => {
-                        const tr = document.createElement('tr');
-                        const dateTd = document.createElement('td');
-                        dateTd.textContent = row.Date;
-                        const forecastTd = document.createElement('td');
-                        forecastTd.textContent = row.Forecasts;
-                        tr.appendChild(dateTd);
-                        tr.appendChild(forecastTd);
-                        prophetTable.appendChild(tr);
-                    });
-
-                    // Update images
-                    document.getElementById('xgboost-img').src = "/static/xgboost_predictions.png";
-                    document.getElementById('prophet-img').src = "/static/prophet_predictions.png";
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('trainMessage').style.display = 'block';
+                        document.getElementById('predictForm').style.display = 'block';
+                    } else {
+                        console.error('Training failed');
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
                 });
         });
+
+        document.getElementById('predictForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const filepath = document.getElementById('filepath').value;
+            fetch('/predict', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ filepath: filepath })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+
+                    // Display sample predictions
+                    displaySamplePredictions(data.xgboost_sample, 'xgboostSampleTable');
+                    displaySamplePredictions(data.prophet_sample, 'prophetSampleTable');
+
+                    // Display images
+                    document.getElementById('xgboostImg').src = "{{ url_for('static', filename='xgboost_predictions.png') }}?" + new Date().getTime();
+                    document.getElementById('prophetImg').src = "{{ url_for('static', filename='prophet_predictions.png') }}?" + new Date().getTime();
+
+                    // Show predictions container
+                    document.querySelector('.predictions-container').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+        function displaySamplePredictions(data, tableId) {
+            const table = document.getElementById(tableId);
+            table.innerHTML = '';
+
+            const headerRow = document.createElement('tr');
+            const headers = Object.keys(data[0]);
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.textContent = row[header];
+                    tr.appendChild(td);
+                });
+                table.appendChild(tr);
+            });
+        }
     </script>
 </body>
 

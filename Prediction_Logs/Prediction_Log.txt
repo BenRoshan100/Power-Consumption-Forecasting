@@ -236,3 +236,185 @@
 2024-07-29/22:45:50		Entered the load_model method of the File_Operation class
 2024-07-29/22:45:50		Model FileProphetloaded. Exited the load_model method of Model_Finder class
 2024-07-29/22:46:06		End of Prediction
+2024-07-30/22:01:01		Start of Prediction
+2024-07-30/22:01:01		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:01:01		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:01:01		Started converting datatypes of columns
+2024-07-30/22:01:01		Successfully converted columns to appropriate format
+2024-07-30/22:01:01		Started extracting date features
+2024-07-30/22:01:01		Successfully extracted data features
+2024-07-30/22:01:01		Start ordinal encoding
+2024-07-30/22:01:01		Successfully ordinal encoded the columns
+2024-07-30/22:01:01		Entered the load_model method of the File_Operation class
+2024-07-30/22:01:01		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:01:01		Entered the load_model method of the File_Operation class
+2024-07-30/22:01:01		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:01:18		End of Prediction
+2024-07-30/22:03:32		Start of Prediction
+2024-07-30/22:03:32		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:03:32		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:03:32		Started converting datatypes of columns
+2024-07-30/22:03:32		Successfully converted columns to appropriate format
+2024-07-30/22:03:32		Started extracting date features
+2024-07-30/22:03:32		Successfully extracted data features
+2024-07-30/22:03:32		Start ordinal encoding
+2024-07-30/22:03:32		Successfully ordinal encoded the columns
+2024-07-30/22:03:32		Entered the load_model method of the File_Operation class
+2024-07-30/22:03:32		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:03:32		Entered the load_model method of the File_Operation class
+2024-07-30/22:03:32		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:03:47		End of Prediction
+2024-07-30/22:08:57		Start of Prediction
+2024-07-30/22:08:57		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:08:57		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:08:57		Started converting datatypes of columns
+2024-07-30/22:08:57		Successfully converted columns to appropriate format
+2024-07-30/22:08:57		Started extracting date features
+2024-07-30/22:08:57		Successfully extracted data features
+2024-07-30/22:08:57		Start ordinal encoding
+2024-07-30/22:08:57		Successfully ordinal encoded the columns
+2024-07-30/22:08:57		Entered the load_model method of the File_Operation class
+2024-07-30/22:08:57		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:08:57		Entered the load_model method of the File_Operation class
+2024-07-30/22:08:57		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:09:11		End of Prediction
+2024-07-30/22:12:00		Start of Prediction
+2024-07-30/22:12:00		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:12:00		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:12:00		Started converting datatypes of columns
+2024-07-30/22:12:00		Successfully converted columns to appropriate format
+2024-07-30/22:12:00		Started extracting date features
+2024-07-30/22:12:00		Successfully extracted data features
+2024-07-30/22:12:00		Start ordinal encoding
+2024-07-30/22:12:00		Successfully ordinal encoded the columns
+2024-07-30/22:12:00		Entered the load_model method of the File_Operation class
+2024-07-30/22:12:00		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:12:00		Entered the load_model method of the File_Operation class
+2024-07-30/22:12:00		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:12:16		End of Prediction
+2024-07-30/22:13:22		Start of Prediction
+2024-07-30/22:13:22		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:13:22		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:13:22		Started converting datatypes of columns
+2024-07-30/22:13:22		Successfully converted columns to appropriate format
+2024-07-30/22:13:22		Started extracting date features
+2024-07-30/22:13:22		Successfully extracted data features
+2024-07-30/22:13:22		Start ordinal encoding
+2024-07-30/22:13:22		Successfully ordinal encoded the columns
+2024-07-30/22:13:22		Entered the load_model method of the File_Operation class
+2024-07-30/22:13:22		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:13:22		Entered the load_model method of the File_Operation class
+2024-07-30/22:13:22		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:13:36		End of Prediction
+2024-07-30/22:16:42		Start of Prediction
+2024-07-30/22:16:42		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:16:42		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:16:42		Started converting datatypes of columns
+2024-07-30/22:16:42		Successfully converted columns to appropriate format
+2024-07-30/22:16:42		Started extracting date features
+2024-07-30/22:16:42		Successfully extracted data features
+2024-07-30/22:16:42		Start ordinal encoding
+2024-07-30/22:16:42		Successfully ordinal encoded the columns
+2024-07-30/22:16:42		Entered the load_model method of the File_Operation class
+2024-07-30/22:16:42		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:16:42		Entered the load_model method of the File_Operation class
+2024-07-30/22:16:42		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:16:56		End of Prediction
+2024-07-30/22:19:24		Start of Prediction
+2024-07-30/22:19:24		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:19:24		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:19:24		Started converting datatypes of columns
+2024-07-30/22:19:24		Successfully converted columns to appropriate format
+2024-07-30/22:19:24		Started extracting date features
+2024-07-30/22:19:24		Successfully extracted data features
+2024-07-30/22:19:24		Start ordinal encoding
+2024-07-30/22:19:24		Successfully ordinal encoded the columns
+2024-07-30/22:19:24		Entered the load_model method of the File_Operation class
+2024-07-30/22:19:24		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:19:25		Entered the load_model method of the File_Operation class
+2024-07-30/22:19:25		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:19:39		End of Prediction
+2024-07-30/22:22:57		Start of Prediction
+2024-07-30/22:22:57		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:22:57		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:22:57		Started converting datatypes of columns
+2024-07-30/22:22:57		Successfully converted columns to appropriate format
+2024-07-30/22:22:57		Started extracting date features
+2024-07-30/22:22:57		Successfully extracted data features
+2024-07-30/22:22:57		Start ordinal encoding
+2024-07-30/22:22:57		Successfully ordinal encoded the columns
+2024-07-30/22:22:57		Entered the load_model method of the File_Operation class
+2024-07-30/22:22:57		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:22:57		Entered the load_model method of the File_Operation class
+2024-07-30/22:22:57		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:23:11		End of Prediction
+2024-07-30/22:24:15		Start of Prediction
+2024-07-30/22:24:15		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:24:15		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:24:15		Started converting datatypes of columns
+2024-07-30/22:24:15		Successfully converted columns to appropriate format
+2024-07-30/22:24:15		Started extracting date features
+2024-07-30/22:24:15		Successfully extracted data features
+2024-07-30/22:24:15		Start ordinal encoding
+2024-07-30/22:24:15		Successfully ordinal encoded the columns
+2024-07-30/22:24:15		Entered the load_model method of the File_Operation class
+2024-07-30/22:24:15		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:24:15		Entered the load_model method of the File_Operation class
+2024-07-30/22:24:15		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:24:30		End of Prediction
+2024-07-30/22:25:56		Start of Prediction
+2024-07-30/22:25:56		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:25:56		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:25:56		Started converting datatypes of columns
+2024-07-30/22:25:56		Successfully converted columns to appropriate format
+2024-07-30/22:25:56		Started extracting date features
+2024-07-30/22:25:56		Successfully extracted data features
+2024-07-30/22:25:56		Start ordinal encoding
+2024-07-30/22:25:56		Successfully ordinal encoded the columns
+2024-07-30/22:25:56		Entered the load_model method of the File_Operation class
+2024-07-30/22:25:56		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:25:56		Entered the load_model method of the File_Operation class
+2024-07-30/22:25:56		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:26:10		End of Prediction
+2024-07-30/22:29:29		Start of Prediction
+2024-07-30/22:29:29		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:29:29		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:29:29		Started converting datatypes of columns
+2024-07-30/22:29:29		Successfully converted columns to appropriate format
+2024-07-30/22:29:29		Started extracting date features
+2024-07-30/22:29:29		Successfully extracted data features
+2024-07-30/22:29:29		Start ordinal encoding
+2024-07-30/22:29:29		Successfully ordinal encoded the columns
+2024-07-30/22:29:29		Entered the load_model method of the File_Operation class
+2024-07-30/22:29:29		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:29:29		Entered the load_model method of the File_Operation class
+2024-07-30/22:29:29		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:29:43		End of Prediction
+2024-07-30/22:42:12		Start of Prediction
+2024-07-30/22:42:12		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:42:12		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:42:12		Started converting datatypes of columns
+2024-07-30/22:42:12		Successfully converted columns to appropriate format
+2024-07-30/22:42:12		Started extracting date features
+2024-07-30/22:42:12		Successfully extracted data features
+2024-07-30/22:42:12		Start ordinal encoding
+2024-07-30/22:42:12		Successfully ordinal encoded the columns
+2024-07-30/22:42:12		Entered the load_model method of the File_Operation class
+2024-07-30/22:42:12		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:42:12		Entered the load_model method of the File_Operation class
+2024-07-30/22:42:12		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:42:27		End of Prediction
+2024-07-30/22:42:46		Start of Prediction
+2024-07-30/22:42:46		Entered the get_data method of Data_Getter class for Prediction
+2024-07-30/22:42:46		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-30/22:42:46		Started converting datatypes of columns
+2024-07-30/22:42:46		Successfully converted columns to appropriate format
+2024-07-30/22:42:46		Started extracting date features
+2024-07-30/22:42:46		Successfully extracted data features
+2024-07-30/22:42:46		Start ordinal encoding
+2024-07-30/22:42:46		Successfully ordinal encoded the columns
+2024-07-30/22:42:46		Entered the load_model method of the File_Operation class
+2024-07-30/22:42:46		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:42:46		Entered the load_model method of the File_Operation class
+2024-07-30/22:42:46		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-30/22:43:00		End of Prediction

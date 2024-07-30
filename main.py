@@ -8,6 +8,8 @@ from trainingModel import trainModel
 from prediction_Validation_Insertion import pred_validation
 from predictFromModel import prediction
 import json
+import pandas as pd
+import matplotlib.pyplot as plt
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
@@ -62,13 +64,29 @@ def predictRouteClient():
         xgboost_sample = xgboost_predictions.head(5).to_dict(orient='records')
         prophet_sample = prophet_predictions.head(5).to_dict(orient='records')
         
-        # Convert to JSON
-        xgboost_json = xgboost_predictions.to_json(orient='records')
-        prophet_json = prophet_predictions.to_json(orient='records')
+        # Plot and save XGBoost predictions
+        plt.figure()
+        plt.plot(xgboost_predictions['Date'], xgboost_predictions['Forecasts'], label='XGBoost Predictions')
+        plt.xlabel('Date')
+        plt.ylabel('Forecasts')
+        plt.legend()
+        xgboost_img_path = os.path.join('static', 'xgboost_predictions.png').replace("\\", "/")
+        plt.savefig(xgboost_img_path)
+        plt.close()
+        print(f"XGBoost image saved at: {xgboost_img_path}")  # Debug print
+
+        # Plot and save Prophet predictions
+        plt.figure()
+        plt.plot(prophet_predictions['Date'], prophet_predictions['Forecasts'], label='Prophet Predictions')
+        plt.xlabel('Date')
+        plt.ylabel('Forecasts')
+        plt.legend()
+        prophet_img_path = os.path.join('static', 'prophet_predictions.png').replace("\\", "/")
+        plt.savefig(prophet_img_path)
+        plt.close()
+        print(f"Prophet image saved at: {prophet_img_path}")  # Debug print
         
         response_data = {
-            'xgboost': json.loads(xgboost_json),
-            'prophet': json.loads(prophet_json),
             'xgboost_sample': xgboost_sample,
             'prophet_sample': prophet_sample
         }
