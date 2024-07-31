@@ -232,3 +232,35 @@ ValueError: DataFrame.dtypes for data must be int, float or bool.
 2024-07-28/14:19:24		Model FileXGBoost saved. Exited the save_model method of the Model_Finder class
 2024-07-28/14:19:24		Model FileProphet saved. Exited the save_model method of the Model_Finder class
 2024-07-28/14:19:24		Successful End of Training
+2024-07-31/08:17:55		Start of training
+2024-07-31/08:17:55		Entered the get_data method of Data_Getter class
+2024-07-31/08:17:55		Data Load successfully
+2024-07-31/08:17:55		Started converting datatypes of columns
+2024-07-31/08:17:55		Successfully converted columns to appropriate format
+2024-07-31/08:17:55		Started extracting date features
+2024-07-31/08:17:55		Successfully extracted data features
+2024-07-31/08:17:55		Start ordinal encoding
+2024-07-31/08:17:56		Successfully ordinal encoded the columns
+2024-07-31/08:17:56		Started splitting features and labels
+2024-07-31/08:17:56		Successfully split features and label
+2024-07-31/08:17:56		Started train-test split
+2024-07-31/08:17:56		Successfully completed train-test split
+2024-07-31/08:17:56		Data preprocessing completed successfully
+2024-07-31/08:17:56		Entered get_best_model method of the Model_Finder class
+2024-07-31/08:17:56		Entered the get_best_params_for_xgboost function
+2024-07-31/08:36:14		Start of training
+2024-07-31/08:36:14		Entered the get_data method of Data_Getter class
+2024-07-31/08:36:14		Data Load successfully
+2024-07-31/08:36:14		Started converting datatypes of columns
+2024-07-31/08:36:14		Successfully converted columns to appropriate format
+2024-07-31/08:36:14		Started extracting date features
+2024-07-31/08:36:14		Successfully extracted data features
+2024-07-31/08:36:14		Start ordinal encoding
+2024-07-31/08:36:14		Successfully ordinal encoded the columns
+2024-07-31/08:36:14		Started splitting features and labels
+2024-07-31/08:36:14		Successfully split features and label
+2024-07-31/08:36:14		Started train-test split
+2024-07-31/08:36:14		Successfully completed train-test split
+2024-07-31/08:36:14		Data preprocessing completed successfully
+2024-07-31/08:36:14		Entered get_best_model method of the Model_Finder class
+2024-07-31/08:36:14		Entered the get_best_params_for_xgboost function

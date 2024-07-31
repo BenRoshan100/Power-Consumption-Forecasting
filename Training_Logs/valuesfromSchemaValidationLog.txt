@@ -13,3 +13,11 @@
 
 2024-07-30/22:55:35		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
 
+2024-07-31/08:15:50		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
+
+2024-07-31/08:17:55		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
+
+2024-07-31/08:34:34		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
+
+2024-07-31/08:36:13		Total Columns: 2	Expected First column types: ['object', 'datetime64[ns]']	Expected Second column types: ['float64', 'int64']
+

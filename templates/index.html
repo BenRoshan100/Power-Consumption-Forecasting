@@ -100,16 +100,7 @@
 <body>
     <h1>Forecast Predictions</h1>
 
-    <form id="trainForm">
-        <h2>Train Model</h2>
-        <label for="folderPath">Folder Path:</label>
-        <input type="text" id="folderPath" name="folderPath" required>
-        <button type="submit">Train</button>
-        <p id="trainMessage" style="display:none; color: #f8b400; margin-top: 10px;">Training complete! Please enter the
-            file path for predictions and click Predict.</p>
-    </form>
-
-    <form id="predictForm" style="display:none;">
+    <form id="predictForm">
         <h2>Get Predictions</h2>
         <label for="filepath">File Path:</label>
         <input type="text" id="filepath" name="filepath" required>
@@ -137,27 +128,6 @@
     </div>
 
     <script>
-        document.getElementById('trainForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const folderPath = document.getElementById('folderPath').value;
-            fetch('/train', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ folderPath: folderPath })
-            })
-                .then(response => {
-                    if (response.ok) {
-                        document.getElementById('trainMessage').style.display = 'block';
-                        document.getElementById('predictForm').style.display = 'block';
-                    } else {
-                        console.error('Training failed');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        });
-
         document.getElementById('predictForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const filepath = document.getElementById('filepath').value;
@@ -179,7 +149,7 @@
                     document.getElementById('prophetImg').src = "{{ url_for('static', filename='prophet_predictions.png') }}?" + new Date().getTime();
 
                     // Show predictions container
-                    document.querySelector('.predictions-container').style.display = 'block';
+                    document.querySelector('.predictions-container').style.display = 'flex';
                 })
                 .catch(error => {
                     console.error('Error:', error);
