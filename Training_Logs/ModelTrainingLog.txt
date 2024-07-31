@@ -264,3 +264,27 @@ ValueError: DataFrame.dtypes for data must be int, float or bool.
 2024-07-31/08:36:14		Data preprocessing completed successfully
 2024-07-31/08:36:14		Entered get_best_model method of the Model_Finder class
 2024-07-31/08:36:14		Entered the get_best_params_for_xgboost function
+2024-07-31/21:21:24		Start of training
+2024-07-31/21:21:24		Entered the get_data method of Data_Getter class
+2024-07-31/21:21:24		Data Load successfully
+2024-07-31/21:21:24		Started converting datatypes of columns
+2024-07-31/21:21:24		Successfully converted columns to appropriate format
+2024-07-31/21:21:24		Started extracting date features
+2024-07-31/21:21:25		Successfully extracted data features
+2024-07-31/21:21:25		Start ordinal encoding
+2024-07-31/21:21:25		Successfully ordinal encoded the columns
+2024-07-31/21:21:25		Started splitting features and labels
+2024-07-31/21:21:25		Successfully split features and label
+2024-07-31/21:21:25		Started train-test split
+2024-07-31/21:21:25		Successfully completed train-test split
+2024-07-31/21:21:25		Data preprocessing completed successfully
+2024-07-31/21:21:25		Entered get_best_model method of the Model_Finder class
+2024-07-31/21:21:25		Entered the get_best_params_for_xgboost function
+2024-07-31/22:06:46		XGBoost best params: {'learning_rate': 0.3, 'max_depth': 10, 'n_estimators': 300}. Exited the get_best_params_for_xgboost function
+2024-07-31/22:06:47		MSE for XGBoost: 9740.705911395811
+2024-07-31/22:06:47		Entered the get_best_params_for_prophet function
+2024-07-31/22:08:10		Prophet model trained. Exited the function
+2024-07-31/22:08:29		Entered the save_model method of the File_Operation class
+2024-07-31/22:08:29		Model FileXGBoost saved. Exited the save_model method of the Model_Finder class
+2024-07-31/22:08:29		Model FileProphet saved. Exited the save_model method of the Model_Finder class
+2024-07-31/22:08:29		Successful End of Training

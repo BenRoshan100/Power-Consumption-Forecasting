@@ -30,19 +30,19 @@ def trainRouteClient():
         if request.json and 'folderPath' in request.json:
             path = request.json['folderPath']
         else:
-            return Response("Invalid input format", status=400)
+            return jsonify({"message": "Invalid input format"}), 400
         
         train_valObj = train_validation(path)
         train_valObj.train_validation()
-        trainModelObj = trainModel()
+        trainModelObj = trainModel(path)
         trainModelObj.trainingModel()
-        return Response("Training successful")
+        return jsonify({"message": "Training complete"})
     except ValueError as ve:
-        return Response("Error Occurred! %s" % ve, status=500)
+        return jsonify({"message": f"Error Occurred! {ve}"}), 500
     except KeyError as ke:
-        return Response("Error Occurred! %s" % ke, status=500)
+        return jsonify({"message": f"Error Occurred! {ke}"}), 500
     except Exception as e:
-        return Response("Error Occurred! %s" % e, status=500)
+        return jsonify({"message": f"Error Occurred! {e}"}), 500
 
 @app.route("/predict", methods=["POST"])
 @cross_origin()
@@ -53,7 +53,7 @@ def predictRouteClient():
         elif request.form is not None:
             path = request.form['filepath']
         else:
-            return Response("Invalid input format", status=400)
+            return jsonify({"message": "Invalid input format"}), 400
         
         pred_val = pred_validation(path)
         pred_val.prediction_validation()
@@ -73,7 +73,6 @@ def predictRouteClient():
         xgboost_img_path = os.path.join('static', 'xgboost_predictions.png').replace("\\", "/")
         plt.savefig(xgboost_img_path)
         plt.close()
-        print(f"XGBoost image saved at: {xgboost_img_path}")  # Debug print
 
         # Plot and save Prophet predictions
         plt.figure()
@@ -84,20 +83,20 @@ def predictRouteClient():
         prophet_img_path = os.path.join('static', 'prophet_predictions.png').replace("\\", "/")
         plt.savefig(prophet_img_path)
         plt.close()
-        print(f"Prophet image saved at: {prophet_img_path}")  # Debug print
         
         response_data = {
             'xgboost_sample': xgboost_sample,
-            'prophet_sample': prophet_sample
+            'prophet_sample': prophet_sample,
+            'message': 'Prediction complete'
         }
         
         return jsonify(response_data)
     except ValueError as ve:
-        return Response("Error Occurred! %s" % ve, status=500)
+        return jsonify({"message": f"Error Occurred! {ve}"}), 500
     except KeyError as ke:
-        return Response("Error Occurred! %s" % ke, status=500)
+        return jsonify({"message": f"Error Occurred! {ke}"}), 500
     except Exception as e:
-        return Response("Error Occurred! %s" % e, status=500)
+        return jsonify({"message": f"Error Occurred! {e}"}), 500
 
 port = int(os.getenv("PORT", 5000))
 if __name__ == "__main__":

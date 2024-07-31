@@ -64,3 +64,7 @@
 2024-07-31/09:02:00		Column Type Validation Completed!
 2024-07-31/09:03:50		Column Type Validation started successfully
 2024-07-31/09:03:50		Column Type Validation Completed!
+2024-07-31/21:19:28		Column Type Validation started successfully
+2024-07-31/21:19:28		Column Type Validation Completed!
+2024-07-31/22:08:48		Column Type Validation started successfully
+2024-07-31/22:08:48		Column Type Validation Completed!

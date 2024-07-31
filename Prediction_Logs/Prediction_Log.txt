@@ -544,3 +544,31 @@
 2024-07-31/09:03:51		Entered the load_model method of the File_Operation class
 2024-07-31/09:03:51		Model FileProphetloaded. Exited the load_model method of Model_Finder class
 2024-07-31/09:04:09		End of Prediction
+2024-07-31/21:19:28		Start of Prediction
+2024-07-31/21:19:28		Entered the get_data method of Data_Getter class for Prediction
+2024-07-31/21:19:28		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-31/21:19:28		Started converting datatypes of columns
+2024-07-31/21:19:28		Successfully converted columns to appropriate format
+2024-07-31/21:19:28		Started extracting date features
+2024-07-31/21:19:28		Successfully extracted data features
+2024-07-31/21:19:28		Start ordinal encoding
+2024-07-31/21:19:28		Successfully ordinal encoded the columns
+2024-07-31/21:19:28		Entered the load_model method of the File_Operation class
+2024-07-31/21:19:28		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-31/21:19:28		Entered the load_model method of the File_Operation class
+2024-07-31/21:19:28		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-31/21:19:45		End of Prediction
+2024-07-31/22:08:48		Start of Prediction
+2024-07-31/22:08:48		Entered the get_data method of Data_Getter class for Prediction
+2024-07-31/22:08:48		Data Load successful for Prediction. Exited the get_data method of Data_Getter class
+2024-07-31/22:08:48		Started converting datatypes of columns
+2024-07-31/22:08:48		Successfully converted columns to appropriate format
+2024-07-31/22:08:48		Started extracting date features
+2024-07-31/22:08:48		Successfully extracted data features
+2024-07-31/22:08:48		Start ordinal encoding
+2024-07-31/22:08:48		Successfully ordinal encoded the columns
+2024-07-31/22:08:48		Entered the load_model method of the File_Operation class
+2024-07-31/22:08:48		Model FileXGBoostloaded. Exited the load_model method of Model_Finder class
+2024-07-31/22:08:48		Entered the load_model method of the File_Operation class
+2024-07-31/22:08:48		Model FileProphetloaded. Exited the load_model method of Model_Finder class
+2024-07-31/22:09:03		End of Prediction
