@@ -71,3 +71,5 @@
 2024-07-31/21:19:28		Missing Values Validation Completed!
 2024-07-31/22:08:48		Missing Values Validation Started!!
 2024-07-31/22:08:48		Missing Values Validation Completed!
+2024-08-01/08:54:25		Missing Values Validation Started!!
+2024-08-01/08:54:25		Missing Values Validation Completed!

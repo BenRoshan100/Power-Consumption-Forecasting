@@ -96,3 +96,5 @@
 2024-07-31/21:19:28		Column Length Validation Completed!
 2024-07-31/22:08:48		Column Length Validation started successfully
 2024-07-31/22:08:48		Column Length Validation Completed!
+2024-08-01/08:54:25		Column Length Validation started successfully
+2024-08-01/08:54:25		Column Length Validation Completed!
